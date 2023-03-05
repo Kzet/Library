@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Добавление нового клиента</h1>
+<mat-dialog-content>
+  <form class="example-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" color="primary">
+      <mat-label>Email</mat-label>
+      <input [disabled]="true" type="email" matInput formControlName="email">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" color="primary">
+      <mat-label>Имя</mat-label>
+      <input type="text" matInput formControlName="name">
+    </mat-form-field>
+
+    <div class="button">
+      <button type="submit" mat-stroked-button color="primary">
+        Сохранить
+      </button>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="false" mat-dialog-close>Отмена</button>
+</mat-dialog-actions>

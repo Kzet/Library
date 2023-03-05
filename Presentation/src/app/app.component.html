@@ -1,0 +1,27 @@
+<div class="er-header">
+
+  <div class="header">
+    <div class="logo custom-font  menu">Библиотека</div>
+
+    <a class="el-menu menu custom-font"
+       [routerLink]="['/clients']"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       title="Клиенты">
+      Клиенты
+    </a>
+
+    <a class="el-menu menu custom-font"
+       [routerLink]="['/books']"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       title="Книги">
+      Книги
+    </a>
+  </div>
+</div>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

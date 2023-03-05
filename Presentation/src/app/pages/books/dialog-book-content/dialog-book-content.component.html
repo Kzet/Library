@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Добавление новой книги</h1>
+<mat-dialog-content>
+  <form class="example-form" [formGroup]="booksForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" color="primary">
+      <mat-label>Название</mat-label>
+      <input [disabled]="true" type="email" matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" color="primary">
+      <mat-label>Автор</mat-label>
+      <input type="text" matInput formControlName="author">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Жанр</mat-label>
+      <mat-select formControlName="genreId">
+        <mat-option>Очистить</mat-option>
+        <mat-option *ngFor="let genre of genres" [value]="genre.id">
+          {{genre.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="button">
+      <button type="submit" mat-stroked-button color="primary">
+        Сохранить
+      </button>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="false" mat-dialog-close>Отмена</button>
+</mat-dialog-actions>

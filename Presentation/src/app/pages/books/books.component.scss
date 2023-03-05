@@ -1,0 +1,22 @@
+.table {
+  width: 100%;
+}
+
+tr.mat-row, tr.mat-footer-row {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+tr.mat-row:hover, tr.mat-footer-row:hover {
+  background: whitesmoke;
+}
+
+.button-container {
+  margin-top: 20px;
+  padding-bottom: 16px;
+}
+
+.button + .button {
+  margin-left: 8px;
+}
