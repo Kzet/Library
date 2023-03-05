@@ -1,0 +1,17 @@
+D:\Projects\Library\Services\bin\Debug\net7.0\Services.deps.json
+D:\Projects\Library\Services\bin\Debug\net7.0\Services.dll
+D:\Projects\Library\Services\bin\Debug\net7.0\Services.pdb
+D:\Projects\Library\Services\obj\Debug\net7.0\Services.csproj.AssemblyReference.cache
+D:\Projects\Library\Services\obj\Debug\net7.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Library\Services\obj\Debug\net7.0\Services.AssemblyInfoInputs.cache
+D:\Projects\Library\Services\obj\Debug\net7.0\Services.AssemblyInfo.cs
+D:\Projects\Library\Services\obj\Debug\net7.0\Services.csproj.CoreCompileInputs.cache
+D:\Projects\Library\Services\obj\Debug\net7.0\Services.dll
+D:\Projects\Library\Services\obj\Debug\net7.0\refint\Services.dll
+D:\Projects\Library\Services\obj\Debug\net7.0\Services.pdb
+D:\Projects\Library\Services\obj\Debug\net7.0\ref\Services.dll
+D:\Projects\Library\Services\bin\Debug\net7.0\Core.dll
+D:\Projects\Library\Services\bin\Debug\net7.0\Data.dll
+D:\Projects\Library\Services\bin\Debug\net7.0\Core.pdb
+D:\Projects\Library\Services\bin\Debug\net7.0\Data.pdb
+D:\Projects\Library\Services\obj\Debug\net7.0\Services.csproj.CopyComplete

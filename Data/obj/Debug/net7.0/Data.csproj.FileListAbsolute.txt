@@ -1,0 +1,17 @@
+D:\Projects\Library\Data\bin\Debug\net7.0\Data.deps.json
+D:\Projects\Library\Data\bin\Debug\net7.0\Data.runtimeconfig.json
+D:\Projects\Library\Data\bin\Debug\net7.0\Data.dll
+D:\Projects\Library\Data\bin\Debug\net7.0\Data.pdb
+D:\Projects\Library\Data\bin\Debug\net7.0\Core.dll
+D:\Projects\Library\Data\bin\Debug\net7.0\Core.pdb
+D:\Projects\Library\Data\obj\Debug\net7.0\Data.csproj.AssemblyReference.cache
+D:\Projects\Library\Data\obj\Debug\net7.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Library\Data\obj\Debug\net7.0\Data.AssemblyInfoInputs.cache
+D:\Projects\Library\Data\obj\Debug\net7.0\Data.AssemblyInfo.cs
+D:\Projects\Library\Data\obj\Debug\net7.0\Data.csproj.CoreCompileInputs.cache
+D:\Projects\Library\Data\obj\Debug\net7.0\Data.csproj.CopyComplete
+D:\Projects\Library\Data\obj\Debug\net7.0\Data.dll
+D:\Projects\Library\Data\obj\Debug\net7.0\refint\Data.dll
+D:\Projects\Library\Data\obj\Debug\net7.0\Data.pdb
+D:\Projects\Library\Data\obj\Debug\net7.0\Data.genruntimeconfig.cache
+D:\Projects\Library\Data\obj\Debug\net7.0\ref\Data.dll
