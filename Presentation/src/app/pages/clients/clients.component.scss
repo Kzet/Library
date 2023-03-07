@@ -1,15 +1,38 @@
 
 .table {
-  width: 100%;
+  width: 99%;
 }
 
-tr.mat-row, tr.mat-footer-row {
+.container {
+  display: flex;
+  flex-direction: row;
+  margin:auto;
+}
+
+.clients {
+  width: 66%;
+}
+
+.debtors {
+  width: 33%;
+}
+
+.title-debtors {
+  font-size: 20px;
+  margin-top: 20px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  text-align: center;
+  height: 36px;
+}
+
+tr.mat-row{
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   cursor: pointer;
 }
 
-tr.mat-row:hover, tr.mat-footer-row:hover {
+tr.mat-row:hover {
   background: whitesmoke;
 }
 
@@ -20,4 +43,9 @@ tr.mat-row:hover, tr.mat-footer-row:hover {
 
 .button + .button {
   margin-left: 8px;
+}
+
+.filter {
+  display: block;
+  width: 95%;
 }

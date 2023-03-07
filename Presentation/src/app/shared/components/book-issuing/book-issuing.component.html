@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Передать книгу "{{data.book.name}}"</h1>
+<mat-dialog-content>
+  <div>
+    Выдать на неделю книгу "{{data.book.name}}" клиенту "{{data.client.name}} ({{data.client.email}})"
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" (click)="transfer()" cdkFocusInitial>Передать</button>
+  <button mat-button [mat-dialog-close]="false" mat-dialog-close>Отмена</button>
+</mat-dialog-actions>

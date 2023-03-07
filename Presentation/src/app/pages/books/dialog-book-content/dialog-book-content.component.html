@@ -1,15 +1,15 @@
 <h1 mat-dialog-title>Добавление новой книги</h1>
 <mat-dialog-content>
-  <form class="example-form" [formGroup]="booksForm" (ngSubmit)="onSubmit()">
-    <mat-form-field class="example-full-width" color="primary">
+  <form  [formGroup]="booksForm" (ngSubmit)="onSubmit()">
+    <mat-form-field  color="primary" appearance="fill" style="width:100%">
       <mat-label>Название</mat-label>
       <input [disabled]="true" type="email" matInput formControlName="name">
     </mat-form-field>
-    <mat-form-field class="example-full-width" color="primary">
+    <mat-form-field color="primary" appearance="fill" style="width:100%">
       <mat-label>Автор</mat-label>
       <input type="text" matInput formControlName="author">
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" style="width:100%">
       <mat-label>Жанр</mat-label>
       <mat-select formControlName="genreId">
         <mat-option>Очистить</mat-option>
@@ -19,7 +19,7 @@
       </mat-select>
     </mat-form-field>
 
-    <div class="button">
+    <div>
       <button type="submit" mat-stroked-button color="primary">
         Сохранить
       </button>

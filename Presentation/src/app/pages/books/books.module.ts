@@ -12,6 +12,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { DialogBookContentComponent } from './dialog-book-content/dialog-book-content.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { DialogBookContentComponent } from './dialog-book-content/dialog-book-co
     MatIconModule,
     MatTableModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule
   ],
   declarations: [BooksComponent, DialogBookContentComponent]
 })

@@ -1,0 +1,103 @@
+<h1 mat-dialog-title>Клиент "{{data.client.name}} ({{data.client.email}})"</h1>
+<mat-dialog-content>
+  <div *ngIf="returnMode;else unset">
+
+    <button *ngIf="returnMode && !isDebtor" mat-raised-button (click)="editmode()" class="button">
+      Выдача книг
+    </button>
+
+    <div *ngIf="books && books.length > 0;else unsetbooks">
+      <div class="text-block">Книги у клиента:</div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+        <!-- name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Название</th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <!-- dateReturn Column -->
+        <ng-container matColumnDef="dateReturn">
+          <th mat-header-cell *matHeaderCellDef>Дата возврата</th>
+          <td mat-cell *matCellDef="let element">{{element.dateReturn| date}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row
+            (click)="onRow(row)"
+            *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator #paginator [pageSizeOptions]="[5, 10, 15]"
+                     showFirstLastButtons>
+      </mat-paginator>
+    </div>
+    <ng-template #unsetbooks>
+      <div class="text-block">У клиента нет книг</div>
+    </ng-template>
+
+  </div>
+  <ng-template #unset>
+    <button *ngIf="!returnMode" mat-raised-button (click)="editmode()" class="button">
+      Возврат книг
+    </button>
+    <div *ngIf="availableBooks && availableBooks.length > 0;else unsetbooks">
+      <div class="text-block">Книги в наличии:</div>
+      <table mat-table [dataSource]="dataSourceAv" class="mat-elevation-z8 table">
+        <!-- name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>
+            Название
+            <mat-form-field class="filter" floatLabel="never">
+              <mat-label>Поиск</mat-label>
+              <input matInput [formControl]="nameFilter">
+            </mat-form-field>
+          </th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <!-- author Column -->
+        <ng-container matColumnDef="author">
+          <th mat-header-cell *matHeaderCellDef>
+            Автор
+            <mat-form-field class="filter" floatLabel="never">
+              <mat-label>Поиск</mat-label>
+              <input matInput [formControl]="authorFilter">
+            </mat-form-field>
+          </th>
+          <td mat-cell *matCellDef="let element">{{element.author}}</td>
+        </ng-container>
+
+        <!-- genre Column -->
+        <ng-container matColumnDef="genre">
+          <th mat-header-cell *matHeaderCellDef>
+            Жанр
+            <mat-form-field class="filter" floatLabel="never">
+              <mat-label>Поиск</mat-label>
+              <mat-select [formControl]="genreFilter">
+                <mat-option>Очистить</mat-option>
+                <mat-option *ngFor="let genre of genres" [value]="genre.id">
+                  {{genre.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </th>
+          <td mat-cell *matCellDef="let element">{{element.genre.name}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedAvailableColumns"></tr>
+        <tr mat-row
+            (click)="onAvailableBook(row)"
+            *matRowDef="let row; columns: displayedAvailableColumns;"></tr>
+      </table>
+      <mat-paginator #paginatorAv [pageSizeOptions]="[5, 10, 15]"
+                     showFirstLastButtons>
+      </mat-paginator>
+    </div>
+    <ng-template #unsetbooks>
+      <div class="text-block">Нет книг в наличии</div>
+    </ng-template>
+  </ng-template>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="false" mat-dialog-close>Отмена</button>
+</mat-dialog-actions>

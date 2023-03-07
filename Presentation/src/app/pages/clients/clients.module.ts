@@ -9,8 +9,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { RouterModule } from '@angular/router';
 import { DialogContentComponent } from './dialog-content/dialog-content.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { DialogContentComponent } from './dialog-content/dialog-content.componen
     ReactiveFormsModule,
     MatIconModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatGridListModule,
+    MatPaginatorModule
   ],
   declarations: [ClientsComponent,
     DialogContentComponent  ]

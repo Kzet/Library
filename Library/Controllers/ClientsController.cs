@@ -33,6 +33,23 @@ namespace Library.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("api/clients/getClientsByDebt")]
+        public async Task<ActionResult> GetClientsByDebt(bool isDebtor)
+        {
+
+            try
+            {
+                var res = await _clientsService.GetClientsByDebt(isDebtor);
+
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
         [HttpPost]
         [Route("api/clients/registerClient")]
         public async Task<IActionResult> RegisterClient(Client client)

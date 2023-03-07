@@ -1,0 +1,54 @@
+<h1 mat-dialog-title>Книга "{{data.book.name}}"</h1>
+<mat-dialog-content>
+  <div *ngIf="data.book.available;else unset">
+    <div *ngIf="clients && clients.length > 0;else emptyclients">
+      <div class="text-block">Выберите клиента, которому хотите передать книгу</div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+        <!-- name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>
+            Имя
+            <mat-form-field class="filter" floatLabel="never">
+              <mat-label>Поиск</mat-label>
+              <input matInput [formControl]="nameFilter">
+            </mat-form-field>
+          </th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>
+            Email
+            <mat-form-field class="filter" floatLabel="never">
+              <mat-label>Поиск</mat-label>
+              <input matInput [formControl]="emailFilter">
+            </mat-form-field>
+          </th>
+          <td mat-cell *matCellDef="let element">{{element.email}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row
+            (click)="onRow(row)"
+            *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator #paginator [pageSizeOptions]="[5, 10, 15]"
+                     showFirstLastButtons>
+      </mat-paginator>
+    </div>
+    <ng-template #emptyclients>
+      <p>Все клиенты должники</p>
+    </ng-template>
+    
+  </div>
+  <ng-template #unset>
+    <p>Книга "{{data.book.name}}" находится у клиента.</p>
+    <p>Провести возврат книги?</p>
+  </ng-template>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button *ngIf="!data.book.available" mat-button (click)="returnBook()" cdkFocusInitial>Возврат</button>
+  <button mat-button [mat-dialog-close]="false" mat-dialog-close>Отмена</button>
+</mat-dialog-actions>

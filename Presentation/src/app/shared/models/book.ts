@@ -10,4 +10,5 @@ export class Book {
   client: Client;
   clientId: number;
   available: boolean;
+  dateReturn: Date;
 }

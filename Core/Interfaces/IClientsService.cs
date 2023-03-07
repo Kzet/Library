@@ -11,5 +11,6 @@ namespace Core.Interfaces
     {
         Task<Client> RegisterClient(Client client);
         Task<List<Client>> GetClients();
+        Task<List<Client>> GetClientsByDebt(bool isDebtor);
     }
 }

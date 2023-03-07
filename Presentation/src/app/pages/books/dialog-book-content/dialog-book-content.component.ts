@@ -1,13 +1,12 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 import { environment } from '../../../../environments/environment';
 import { Book } from '../../../shared/models/book';
-import { Client } from '../../../shared/models/client';
 import { Genre } from '../../../shared/models/genre';
-import { BooksService } from '../books.service';
+import { BooksService } from '../../../shared/services/books.service';
 @Component({
-  selector: 'app-dialog-content',
+  selector: 'app-book-dialog-content',
   templateUrl: './dialog-book-content.component.html',
   styleUrls: ['./dialog-book-content.component.scss']
 })

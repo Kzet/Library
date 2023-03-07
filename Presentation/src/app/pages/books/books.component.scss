@@ -2,13 +2,13 @@
   width: 100%;
 }
 
-tr.mat-row, tr.mat-footer-row {
+tr.mat-row {
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   cursor: pointer;
 }
 
-tr.mat-row:hover, tr.mat-footer-row:hover {
+tr.mat-row:hover {
   background: whitesmoke;
 }
 
@@ -19,4 +19,13 @@ tr.mat-row:hover, tr.mat-footer-row:hover {
 
 .button + .button {
   margin-left: 8px;
+}
+
+.header {
+  padding: 5px;
+}
+
+.filter {
+  display: block;
+  width: 95%;
 }
